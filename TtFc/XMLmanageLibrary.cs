@@ -6,8 +6,6 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace TtFc
 {
-    //https://learn.microsoft.com/en-us/dotnet/api/system.xml.linq.xelement?view=net-8.0
-    //https://learn.microsoft.com/uk-ua/dotnet/standard/linq/sort-elements
 
     public static class XMLmanageLibrary
     {
@@ -16,30 +14,6 @@ namespace TtFc
         private const string Pages = "Pages";
         private const string Book = "Book";
 
-        //public static void CreateXmlFile(string fileName)
-        //{
-        //    if(File.Exists(fileName))
-        //    {
-        //        return;
-        //    }
-        //    XElement books = new XElement("Books");
-        //    XElement book1 = new XElement(Book,
-        //        new XElement(Author, "Kendro"),
-        //        new XElement(Name, "Car Driving"),
-        //        new XElement(Pages, "237")
-        //    );
-
-        //    XElement book2 = new XElement(Book,
-        //        new XElement(Author, "A"),
-        //        new XElement(Name, "A"),
-        //        new XElement(Pages, "300")
-        //    );
-
-        //    books.Add(book1);
-        //    books.Add(book2);
-        //    XDocument doc = new XDocument(books);
-        //    doc.Save(fileName);
-        //}
         public static List<Book> ReadXmlFile(Stream file)
         {
             var load = XElement.Load(file);

@@ -6,15 +6,6 @@ namespace Tests
 {
     public class UnitTest
     {
-        //public readonly string FileNameStream = "booksStream.xml";
-        //public readonly string FileName = "books.xml";
-
-        //[Fact]
-        //public void CreateXMLFile()
-        //{
-        //    XMLmanageLibrary.CreateXmlFile(FileName);
-        //    XMLmanageLibrary.CreateXmlFile(FileNameStream);
-        //}
         [Fact]
         public void AddNewStream()
         {
