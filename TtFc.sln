@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36616.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtFc", "TtFc.csproj", "{5CF48253-5369-43EE-B942-650F366684AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TtFc", "TtFc\TtFc.csproj", "{5CF48253-5369-43EE-B942-650F366684AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "..\Tests\Tests.csproj", "{9457535B-9589-44D3-9E10-F72576FF0F8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{9457535B-9589-44D3-9E10-F72576FF0F8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
