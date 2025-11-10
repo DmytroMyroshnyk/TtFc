@@ -33,6 +33,10 @@ namespace TtFc
         }
         public static List<Book> ReadXmlFile(string fileName)
         {
+            if(string.IsNullOrWhiteSpace(fileName))
+            {
+                throw new ArgumentException("File name cannot be null or empty.", nameof(fileName));
+            }
             var load = XElement.Load(fileName);
             var books = new List<Book>();
 
@@ -79,6 +83,10 @@ namespace TtFc
         }
         public static void AddBook(string fileName, List<Book> books)
         {
+            if (string.IsNullOrWhiteSpace(fileName))
+            {
+                throw new ArgumentException("File name cannot be null or empty.", nameof(fileName));
+            }
             var load = XElement.Load(fileName);
             foreach (var book in books)
             {
@@ -104,6 +112,10 @@ namespace TtFc
         }
         public static void SortXmlFile(string fileName)
         {
+            if (string.IsNullOrWhiteSpace(fileName))
+            {
+                throw new ArgumentException("File name cannot be null or empty.", nameof(fileName));
+            }
             var load = XElement.Load(fileName);
             var sorted = load.Elements(Book)
                 .OrderBy(el => (string?)el.Element(Author))
@@ -115,6 +127,10 @@ namespace TtFc
 
         public static  List<Book> SearchBook(string fileName, string pattern = null)
         {
+            if (string.IsNullOrWhiteSpace(fileName))
+            {
+                throw new ArgumentException("File name cannot be null or empty.", nameof(fileName));
+            }
             var load = XElement.Load(fileName);
             return load.Elements(Book)
                 .Where(x => ((string?)x.Element(Name))?.Contains(pattern, StringComparison.OrdinalIgnoreCase) ?? false)
@@ -128,6 +144,10 @@ namespace TtFc
         }
         public static void SaveTheListOfBooks(string fileName, List<Book> books)
         {
+            if (string.IsNullOrWhiteSpace(fileName))
+            {
+                throw new ArgumentException("File name cannot be null or empty.", nameof(fileName));
+            }
             XElement booksXml = new XElement("Books");
             foreach (var book in books)
             {
